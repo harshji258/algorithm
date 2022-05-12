@@ -3,40 +3,40 @@
 using namespace std;
 
  //for sorting
-void sorting(int arr[],int n){
+void sorting(int a[],int n){
     for(int i=0;i<n;i++){
         int temp=0;
         for(int j=0;j<n-1-i;j++){
-            if(arr[j]>arr[j+1]){
-                temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+            if(a[j]>a[j+1]){
+                temp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = temp;
             }
         }
     }
 }
 
-void display(int arr[],int n){
+void display(int a[],int n){
     for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
+        cout<<a[i]<<" ";
     }
     cout<<endl;
 }
 
-int binary(int arr[],int n,int key){
+int binary(int a[],int n,int key){
     int start=0;
     int end1 = n-1;
     while(end1>=start){
         int mid = (start+end1)/2;
-        if(arr[mid]==key){
+        if(a[mid]==key){
             return mid;
 //           cout<<"element found in "<<mid<<" location";
 //           break;
         }
-        else if(arr[mid]<key){
+        else if(a[mid]<key){
             start = mid +1;
         }
-        else if(arr[mid]>key){
+        else if(a[mid]>key){
             end1 = mid-1;
         }
     }
